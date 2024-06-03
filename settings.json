@@ -1,0 +1,12 @@
+{
+    "scaleOfTime": 1,
+    "timeSettings": {
+        "clientSpawnDelay": 10,
+        "orderPrepareDelay": 5,
+        "waiterWalkDelay": 10,
+        "customerEatDelay": 10,
+        "customerOrderDelay": 10
+    },
+    "openingTime": 8,
+    "closingTime": 22
+}

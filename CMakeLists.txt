@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.10)
+project(YourProjectName VERSION 1.0)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+find_package(spdlog REQUIRED)
+include(FetchContent)
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+FetchContent_MakeAvailable(json)
+add_executable(main main.cpp Simulation.cpp Classes/Account.cpp Classes/Bill.cpp Classes/Customer.cpp Classes/Dish.cpp Classes/Ingredient.cpp Classes/Kitchen.cpp Classes/Menu.cpp Classes/Recipe.cpp Classes/Restaurant.cpp Classes/Shop.cpp Classes/Table.cpp Classes/Waiter.cpp)
+target_link_libraries(main PRIVATE spdlog::spdlog)
+target_link_libraries(main PRIVATE ncurses)
+target_link_libraries(main PRIVATE nlohmann_json::nlohmann_json)
